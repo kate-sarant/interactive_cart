@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+<title>Frontend Mentor | Interactive card details form</title>
+</head>
+<body>
+<main>
+
+    <div class="carts">
+        <img  id="backgroundDesktop" src="images/bg-main-desktop.png" alt="background">
+        <img  id="backgroundmobile" src="images/bg-main-mobile.png" alt="background">
+        <div id="createdCart">
+        <svg width="84" height="47" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="23.478" cy="23.5" rx="23.478" ry="23.5" fill="#fff"/><path d="M83.5 23.5c0 5.565-4.507 10.075-10.065 10.075-5.559 0-10.065-4.51-10.065-10.075 0-5.565 4.506-10.075 10.065-10.075 5.558 0 10.065 4.51 10.065 10.075Z" stroke="#fff"/></svg>
+        <p id='cardNumber' >0000 0000 0000 0000</p>
+        <div class="bottomCart">
+        <p id='Name'>Jane Appleseed</p>
+        <p id='exDate'><em id='exM'>00</em>/<em id='exY'>00</em></p>
+        </div>
+    </div>
+        <div id="createdCartBack">
+        <p id="cartBackCVV">000</p>
+        </div>
+    </div>
+
+<div class="background-white">
+    <!-- ********complited- ******** start-->
+    <div class="complited">
+    <div class="icon">
+    <svg width="80" height="80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="40" fill="url(#a)"/><path d="M28 39.92 36.08 48l16-16" stroke="#fff" stroke-width="3"/><defs><linearGradient id="a" x1="-23.014" y1="11.507" x2="0" y2="91.507" gradientUnits="userSpaceOnUse"><stop stop-color="#6348FE"/><stop offset="1" stop-color="#610595"/></linearGradient></defs></svg>
+    </div>
+    <h2 id="Thnks">Thank you!</h2>
+    <p id='thankP'>We've added your card details</p>
+    <button id="thanksBtn" type="button" name="button" onclick="window.location.reload()">Continue</button>
+    </div>
+<!-- ********complited- ******** end!-->
+
+    <!-- -form -->
+    <form id="form" action="index.html" method="post">
+    <div class="name wrap">
+    <label for="label">Cardholder name</label>
+    <input id="fullname"type="text" name="" value="" placeholder="e.g. Jane Appleseed">
+    <p id="alertNote1">Wrong format,letters only</p>
+    </div>
+    <div class="cartNumber wrap">
+    <label for="">card number</label>
+    <input id='cardNum'type="text"  name="" value="" placeholder="e.g. 1234 5678 9123 0000">
+    <p id="alertNote2">Wrong format,numbers only</p>
+    </div>
+    <div class="bottomWrap ">
+    <div class="date wrap">
+    <label for="exp.date(MM/YY)">exp. date (MM/YY)</label>
+    <div class="inputs">
+    <input id="month"type="number" min='1' max='12' name="" value="" placeholder="MM">
+
+    <input id="year"type="number"  min="23" max="50" value="" placeholder="YY">
+
+    </div>
+
+    </div>
+
+    <div class="cvc wrap">
+    <label for="cvc">CVC</label>
+    <input id="cvc" type="text" pattern="\d{3}"  required placeholder="e.g.123" name=""  value="">
+
+    </div>
+    </div>
+    <p id="alertNote3">Cant't be blank</p>
+    <p id="alertNote4">Cant't be blank</p>
+
+    <button  id='confirm'type="button" name="button">Confirm</button>
+    </form>
+</div>
+
+</main>
+<footer class="attribution">
+Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+Coded by <a href="https://myportfolio-katesarant.netlify.app/">Katerina Sarantopoulou</a>
+</footer>
+<script type="text/javascript" src="app.js">
+
+</script>
+<link rel="stylesheet" href="master.css">
+</body>
+</html>
