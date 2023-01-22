@@ -21,6 +21,40 @@ let nameRex =/[A-Za-z]{2,}\s[A-Za-z]{2,}/;
 let cartvalid = /^[0-9]{4}\s([0-9]{4}\s){2}[0-9]{4}?/;
 let regexdigit = /[\d]/;
 
+// interactive part
+
+// fullName
+fullname.addEventListener("input",(e)=>{
+  let val=e.target;
+    document.getElementById("Name").innerHTML = val.value
+    if(val.value.length >13){
+      document.getElementById("Name").style.fontSize = "x-small"
+    }
+})
+// cartnumber
+cartNum.addEventListener("keyup",(e)=>{
+    let val=e.target;
+  if(val.value.length == 5){
+    e.keyCode = 32;
+      }
+  document.getElementById("cardNumber").innerHTML = val.value
+})
+// month
+month.addEventListener("input",(e)=>{
+  let val=e.target;
+    document.getElementById("exM").innerHTML = val.value
+})
+// Year
+year.addEventListener("input",(e)=>{
+  let val=e.target;
+    document.getElementById("exY").innerHTML = val.value
+})
+// CVC
+cvc.addEventListener("input",(e)=>{
+  let val=e.target;
+    document.getElementById("cartBackCVV").innerHTML = val.value
+})
+----------
 btn.addEventListener('click',function(){
 
   if(nameRex.test(fullname.value) == false || fullname.value == ''){
