@@ -54,7 +54,7 @@ cvc.addEventListener("input",(e)=>{
   let val=e.target;
     document.getElementById("cartBackCVV").innerHTML = val.value
 })
-----------
+
 btn.addEventListener('click',function(){
 
   if(nameRex.test(fullname.value) == false || fullname.value == ''){
